@@ -1,0 +1,167 @@
+
+
+<!doctype html>
+<html lang="en">
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="snackstyle.css">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+          
+    <title>Bestellen</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-dark fixed-top bg-dark">
+        <div class="container">
+            <a href="./snackbar.html" class="navbar-brand">
+                Patatzaak - De Boer
+            </a>
+            <div class="dropdown-center">
+                <button class="btn btn-secondary dropdown-toggle" id="cart" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="fa fa-shopping-cart"></i> €0,00&nbsp&nbsp
+                </button>
+                <ul class="dropdown-menu dropdown-menu-end" id="winkelwagen">
+                    <li><div id = "klein"></li>
+                    <li><div id = "middel"></li>
+                    <li><div id = "groot"></li>
+                    <li><div id = "broodje"></li>
+                    <hr>
+                    <li><button class="dropdown-item leeg" id = "afrekenen" type="button">Geen Producten</button></li>
+                </ul>
+              </div>
+    
+           
+        </div>
+    </nav>
+<div class="placeholder"></div>
+<div id = alert></div>
+<div class="container h-100">
+    <div class="row align-items-center h-100">
+        <div class="col-12">
+            <div class="row justify-content-center">
+                <div style="margin-top:73px" class="col-md-12">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="card mb-2 mt-2">
+                                <div class="card-body">
+                                    <h2 class="card-title text-center">Bestelgegevens</h2>
+                                    <div class="alert alert-secondary text-center" role="alert">
+                                        Vul de onderstaande gegevens in om de bestelling af te ronden.
+                                    </div>
+                                    <form id="form" action="./ontvangen.html?id=1002", method="post">
+                                        <div class="mb-2">
+                                            <label for="name" class="form-label">Naam:</label>
+                                            <input type="text" minlength="3" maxlength="50" class="form-control" id="name" name="name" required>
+                                        </div>
+                                        <div class="mb-2">
+                                            <label for="email" class="form-label">E-mailadres:</label>
+                                            <input type="email" minlength="3" maxlength="100" class="form-control" id="email" name="email" required>
+                                        </div>
+                                        <div class="row mb-2">
+                                            <div class="col-md-8">
+                                                <label for="street" class="form-label">Straatnaam:</label>
+                                                <input type="text" minlength="3" maxlength="100" class="form-control" id="street" name="street" required>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <label for="number" class="form-label">Huisnummer:</label>
+                                                <input type="text" minlength="1" maxlength="10" class="form-control" id="number" name="number" required>
+                                            </div>
+                                        </div>
+                                        <div class="mb-2">
+                                            <label for="postal" class="form-label">Postcode:</label>
+                                            <input type="text" minlength="6" maxlength="7" class="form-control" id="postal" name="postal" required>
+                                        </div>
+                                        <button type="submit" class="btn btn-primary mt-4" onclick="bestellen()">Bestelling plaatsen</button>
+                                        <div class="form-text">Uw eten wordt z.s.m bezorgd.</div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                             <div class="card mb-2 mt-2">
+                                <div class="card-body">
+                                    <h2 class="card-title text-center" id = "bestelling">Je bestelling ()</h2>
+                                    <ol class="list-group mb-4 bestellijst" id="bestellijst-klein">
+                                        <div class = "bestellijst-plaatje">
+                                        <img src="./img/shoarma.jpg">
+                                        </div>
+                                        <div class = "bestellijst-text">
+                                            <h5><b>Patat Shoarma Klein</b></h5>
+                                            <p>Een lekker warm hapje voor kleine trek</p>
+                                            <p>€ 5,10</p>
+                                        </div>
+                                        <div class = "bestellijst-prijs">
+                                            <p>€ 5,10</p>
+                                            <button type="submit" class="toevoegen" onclick="addklein()"><i class="fa fa-plus"></i></i></button>
+                                            <button type="submit" class="verminderen" onclick="verwijderklein()"><i class="fa fa-minus"></i></button>
+                                            <button type="submit" class="verwijderen" onclick="verwijderkleinhelemaal()"><i class="fa fa-trash-o"></i></button>
+                                    </ol>
+                                    <ol class="list-group mb-4 bestellijst" id="bestellijst-middel">
+                                        <div class = "bestellijst-plaatje">
+                                        <img src="./img/shoarma.jpg">
+                                        </div>
+                                        <div class = "bestellijst-text">
+                                            <h5><b>Patat Shoarma Klein</b></h5>
+                                            <p>Een lekker warm hapje voor kleine trek</p>
+                                            <p>€ 6,60</p>
+                                        </div>
+                                        <div class = "bestellijst-prijs">
+                                            <p>€ 6,60</p>
+                                            <button type="submit" class="toevoegen" onclick="addklein()"><i class="fa fa-plus"></i></i></button>
+                                            <button type="submit" class="verminderen" onclick="verwijderklein()"><i class="fa fa-minus"></i></button>
+                                            <button type="submit" class="verwijderen" onclick="verwijderkleinhelemaal()"><i class="fa fa-trash-o"></i></button>
+                                    </ol>
+                                    <ol class="list-group mb-4 bestellijst" id="bestellijst-groot">
+                                        <div class = "bestellijst-plaatje">
+                                        <img src="./img/shoarma.jpg">
+                                        </div>
+                                        <div class = "bestellijst-text">
+                                            <h5><b>Patat Shoarma Klein</b></h5>
+                                            <p>Een lekker warm hapje voor kleine trek</p>
+                                            <p>€ 7,60</p>
+                                        </div>
+                                        <div class = "bestellijst-prijs">
+                                            <p>€ 7,60</p>
+                                            <button type="submit" class="toevoegen" onclick="addklein()"><i class="fa fa-plus"></i></i></button>
+                                            <button type="submit" class="verminderen" onclick="verwijderklein()"><i class="fa fa-minus"></i></button>
+                                            <button type="submit" class="verwijderen" onclick="verwijderkleinhelemaal()"><i class="fa fa-trash-o"></i></button>
+                                    </ol>
+                                    <ol class="list-group mb-4 bestellijst" id="bestellijst-broodje">
+                                        <div class = "bestellijst-plaatje">
+                                        <img src="./img/broodje.jpg">
+                                        </div>
+                                        <div class = "bestellijst-text">
+                                            <h5><b>Patat Shoarma Klein</b></h5>
+                                            <p>Een lekker warm hapje voor kleine trek</p>
+                                            <p>€ 5,60</p>
+                                        </div>
+                                        <div class = "bestellijst-prijs">
+                                            <p>€ 5,60</p>
+                                            <button type="submit" class="toevoegen" onclick="addklein()"><i class="fa fa-plus"></i></i></button>
+                                            <button type="submit" class="verminderen" onclick="verwijderklein()"><i class="fa fa-minus"></i></button>
+                                            <button type="submit" class="verwijderen" onclick="verwijderkleinhelemaal()"><i class="fa fa-trash-o"></i></button>
+                                    </ol>
+                                    <div id="totaalbedrag">Totaalbedrag: €0,00 </div>
+                                </div>
+                             </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</div>
+<script src="js/fontawesome.all.min.js"></script>
+<script src="./snackscript.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+</body>

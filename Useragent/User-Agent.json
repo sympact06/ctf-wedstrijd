@@ -1,0 +1,12 @@
+{
+    "name": "User-Agent",
+    "description": "Leer om te gaan met de user agent in je browser!",
+    "points": 20,
+    "category": "Beginner",
+    "hint": "",
+    "code": {
+        "html": "<!doctype html><meta charset=utf-8><title>Introductie</title><link rel=stylesheet href=https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css><link rel=stylesheet href=style.css><script src=main.js></script><div class=container><div class=assignment><h2>De useragent moet: NoWindows zijn om de flag te laten zien!</h2><div id=password></div></div></div><script src=https://code.jquery.com/jquery-3.5.1.slim.min.js></script><script src=https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js></script><script src=https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js></script>",
+        "css": "body{margin:0;padding:0;font-family:Arial,sans-serif;display:flex;flex-direction:column;min-height:100vh;background-image:url(\"https://cdn.discordapp.com/attachments/915495042834108477/1125357672045232170/ctf-red.webp\")}.container{flex:1;padding:20px;display:flex;justify-content:center;align-items:center}.assignment{width:80%;background-color:#f5f5f5;padding:20px;border-radius:8px}.text-success{color:#28a745}.text-danger{color:#dc3545}",
+        "js": "var a=new Opdracht(1, \"Header Tag\", \"Lees de header uit\", 20, \"Beginner\", localStorage.getItem(\"token\"), localStorage.getItem(\"uid\")),b=window.navigator.userAgent,c=\"NoWindows\";(async function(){var A=await a.getFlag(),_='<span class=\"text-danger\">Het wachtwoord verschijnt hier als je User-Agent overeen komt.</span>';b==c&&(_=`<span class=\"text-success\">${A}</span>`);document.getElementById(\"password\").innerHTML=_})();"
+    }
+}

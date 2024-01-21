@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Introductie</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="card">
+                    <div class="card-body">
+                        <h1 class="card-title">De Uitdaging van Tim en Olivier</h1>
+                        <p class="card-text mt-4">
+                            Tim heeft onlangs een encryptie-algoritme voor een 'flag' geschreven. Hij was ervan overtuigd dat het onbreekbaar was. Maar Olivier, altijd de scepticus, heeft een manier gevonden om Tim's algoritme te decoderen.
+                        </p>
+                        <div class="alert alert-info mt-4" role="alert">
+                            <strong>Tim zegt:</strong> "Ik heb de flag versleuteld als <span id="encryptedFlag"></span>. Nu kan niemand meer de flag lezen!"                        </div>
+                        
+                        <div class="alert alert-info mt-4" role="alert">
+                            <strong>Olivier zegt:</strong> "Het is niet goed gemaakt. Kijk maar. Probeer het uit in je console en zie het zelf."
+                        </div>
+                        <pre id="codeblock" class="bg-dark text-white p-3 rounded">
+                        </pre>
+                        <div class="mt-4">
+                            <p>Instructies:</p>
+                            <ol>
+                                <li>Kopieer het bovenstaande script.</li>
+                                <li>Open de ontwikkelaarstools in je browser (meestal F12 of Ctrl+Shift+I).</li>
+                                <li>Ga naar het tabblad 'Console'.</li>
+                                <li>Plak het script en druk op Enter.</li>
+                                <li>Zie de gedecodeerde 'flag'!</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="main.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,152 @@
+* {
+    margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+    box-sizing: border-box;
+	font-weight: inherit;
+	font-style: inherit;
+	font-size: 100%;
+	font-family: inherit;
+	vertical-align: baseline;
+
+}
+
+body{
+    height: 100%;
+    background-image: url('./img/background.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.placeholder{
+    margin-bottom:120px;
+}
+
+.grid-container {
+    display: grid;
+    width: 75%;
+    margin: auto;
+    grid-template-columns: auto auto auto;
+    padding: 10px;
+    justify-content: center;
+
+}
+
+.grid-item {
+    background-color: rgba(255, 255, 255, 1);
+    border: 0px solid rgba(0, 0, 0, 0.8);
+    border-radius: 1%;
+    padding: 20px;
+    margin: 30px 10px 30px 10px;
+    font-size: 30px;
+    align-items: center;
+}
+
+.grid-item img{
+    display:block;
+    height: auto;
+    width: 50%;
+    margin: auto;
+    padding: auto;
+}
+
+.cart{
+    background-color: transparent;
+    border: none;
+    width: auto;
+}
+
+.dropdown-item:hover{
+    background-color:transparent;
+}
+
+.leeg{
+    color: white;
+    background-color:rgb(220, 53, 69);
+    border-radius: 0.25rem;
+}
+
+.leeg:hover{
+    background-color: transparent;
+    color: white;
+    background-color:rgb(220, 53, 70, 0.9);
+}
+
+.afrekenen{
+    background-color:rgb(25, 135, 84);
+    color: white;
+    text-decoration: none;
+}
+
+.afrekenen:hover{
+    background-color: transparent;
+    color: white;
+    background-color:rgb(25, 135, 84, 0.9);
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+a:hover{
+    text-decoration: none;
+    color: white;
+}
+
+.bestellijst{
+    display : grid;
+    border-style: solid;
+    border-width: 1px;
+    border-color: lightgray;
+    border-radius: 1%;
+}
+
+.bestellijst img{  
+    grid-column-start: 1;
+    grid-column-end: 2;
+    width: 100px;
+    margin-left: 7%;
+    margin-top: 4%;
+}
+
+.bestellijst-text{
+    grid-column-start: 2;
+    grid-column-end: 6;
+}
+
+.bestellijst-prijs{
+    grid-column-start: 6;
+    grid-column-end: 9;
+}
+
+.toevoegen{
+    width: 40px;
+    height: 40px;
+    color: white;
+    background: lightgreen;
+    border-radius: 25%;
+    font-size: 24px;
+    margin-right: 20px;
+}
+
+.verminderen{
+    width: 40px;
+    height: 40px;
+    color: white;
+    background: orangered;
+    border-radius: 25%;
+    font-size: 24px;
+    margin-right: 20px;
+}
+
+.verwijderen{
+    width: 40px;
+    height: 40px;
+    color: white;
+    background: rgb(220, 53, 69);
+    border-radius: 25%;
+    font-size: 24px;
+}
